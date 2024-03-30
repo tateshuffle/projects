@@ -1,0 +1,29 @@
+BOOTSTRAP / JAVA
+Bootstrap was used to build menu and navbar and customize buttons, Javascript was used in buttons to get random page and youtube search
+
+HTML TAGS:
+1. <h1>
+2. <div>
+3. <h2>
+4. <form>
+5. <input>
+6. <button>
+7. <video>
+8. <img>
+9. <footer>
+10. <p>
+
+CSS PROPERTIES:
+1. padding
+2. text-align
+3. font-family
+4. font-size
+5. font-style
+6. background-color
+7. width
+8. border-radius
+9. border-width
+10. display
+11. justify-content
+12. align-items
+

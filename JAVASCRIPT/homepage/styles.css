@@ -1,0 +1,60 @@
+h1 {
+    padding: 3rem;
+    text-align: center;
+    font-family: impact;
+    font-size: 40pt;
+}
+
+h2 {
+    font-family: helvetica;
+    font-style: italic;
+}
+
+.menu {
+    text-align: center;
+}
+
+body {
+    background-color: #eebc1d;
+}
+
+.list-group-item {
+    background-color: #eebc1d;
+    font-size: 17pt;
+}
+
+.random {
+    padding: 3rem 1rem;
+}
+
+.btn-lg {
+    background-color: black;
+}
+
+input {
+    padding: 0.5rem;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+.vid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+.signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align:center;
+    padding: 2rem;
+}

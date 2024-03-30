@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block table %}
+<h2>Edit Birthday</h2>
+<table>
+    <thead class="edit">
+        <tr>
+            <th>Name</th>
+            <th>Month</th>
+            <th>Day</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <form action="/edit/{{birthday.id}}" method="post">
+                    <td><input name="name" type="text" value="{{ birthday.name }}"></td>
+                    <td><input name="month" type="number" value="{{ birthday.month }}"></td>
+                    <td><input name="day" type="number" value="{{ birthday.day }}"></td>
+                    <td><button id="update" type="submit">Update</button></td>
+                </form>
+                <td>
+                    <form action="/delete", method="post">
+                        <input name="id" type="hidden" value={{birthday.id}}>
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+    </tbody>
+</table>
+{% endblock %}

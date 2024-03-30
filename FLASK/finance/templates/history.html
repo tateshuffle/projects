@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<form action="/history">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Date and Time</th>
+                <th>Symbol</th>
+                <th>Transaction Type</th>
+                <th>Shares</th>
+                <th>Value</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in history_and_costs %}
+            <tr>
+                <td>{{item.timestamp}}</td>
+                <td>{{item.symbol}}</td>
+                <td>{{item.transaction_type}}</td>
+                <td>{{item.shares}}</td>
+                <td>{{item.cost}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</form>
+{% endblock %}

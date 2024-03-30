@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+    <select name="symbol" class="form-select" aria-label="Default select example">
+        <option disabled value="" selected>Stocks</option>
+        {% for company in portfolio %}
+            <option value="{{company['symbol']}}">{{company['symbol']}} (shares: {{company['shares']}})</option>
+        {% endfor %}
+    </select>
+    <input name="shares" class="form-control" type="text" autocomplete="off" placeholder="Shares" aria-label="default input example">
+    <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+{% endblock %}

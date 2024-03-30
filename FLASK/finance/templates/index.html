@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<form action="/">
+    <div class="container-fluid">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Portfolio Value</th>
+                    <th>Account Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>US$ {{portfolio_value}}</td>
+                    <td>US$ {{balance}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Shares</th>
+                    <th>Current Price</th>
+                    <th>Value of Holding</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for company in portfolio %}
+                    <tr>
+                        <td class="symbol">{{company['symbol']}}</td>
+                        <td class="shares">{{company['shares']}}</td>
+                        <td class="price">{{company['price']}}</td>
+                        <td class="holding_value">{{company['holding_value']}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </form>
+{% endblock %}
